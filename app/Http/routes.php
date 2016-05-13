@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('manned', 'MannedController@test');
 
 Route::get('command', 'CommandController@test');
+
+Route::get('admin/index', 'Admin\IndexController@index');
