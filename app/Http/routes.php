@@ -15,14 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('user/{id}', function ($id) {
-    return $id;
-});
-
-Route::get('user_name/{name?}', function ($name = null) {
-    return 'user_name'.$name;
-});
-
-Route::match(['get', 'post', 'put'], '/test', function () {
-    return 'test';
-});
+Route::get('manned', 'MannedController@test');
