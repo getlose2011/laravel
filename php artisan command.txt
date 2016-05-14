@@ -1,0 +1,2 @@
+在目錄下打               php artisan make:controller CommandController
+查看路由清單             php artisan route:list
