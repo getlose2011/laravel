@@ -22,6 +22,7 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('login', 'IndexController@login');
     Route::get('index', 'IndexController@index');
+    Route::resource('article', 'ArticleController');//資源控制器路由
 });
 
 ////Named Routes(第一種用法)
