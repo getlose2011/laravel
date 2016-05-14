@@ -11,6 +11,7 @@ use App\Http\Controllers\Controller;
 class IndexController extends Controller
 {
     public function Index(){
+        echo Route('profile');//Generating URLs To Named Routes
         echo 'admin index';
     }
 }

@@ -15,8 +15,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('manned', 'MannedController@test');
+//Named Routes(第一種用法)
+Route::get('user', ['as' => 'profile', function () {
+    echo Route('profile');//Generating URLs To Named Routes
+    return '<h1>命名</h1>';
+}]);
 
-Route::get('command', 'CommandController@test');
+//第二種用法
+Route::get('user1', [
+    'as' => 'profile', 'uses' => 'Admin\IndexController@index'
+]);
 
-Route::get('admin/index', 'Admin\IndexController@index');
+//第三種用法
+Route::get('user2', 'Admin\IndexController@index')->name('profile');
+
+//Route::get('manned', 'MannedController@test');
+//
+//Route::get('command', 'CommandController@test');
+//
+//Route::get('admin/index', 'Admin\IndexController@index');
