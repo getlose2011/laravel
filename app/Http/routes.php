@@ -11,18 +11,25 @@
 |
 */
 
-//正常要加'middleware' => ['web'] 才可以用session,但沒加也是可以用不知是否為版本問題
-Route::group(['middleware' => ['web']], function () {
-    Route::get('admin/login', 'Admin\IndexController@login');
-    
-    Route::get('/', function () {
-        return view('welcome');
-    });
+//第一種分配view
+//Route::get('/view', function () {
+//        return view('my_laravel');
+//});
+//第二種分配view,由controller
+Route::get('view', 'ViewController@index');
 
-    Route::get('/test_session', function () {        
-        return 'test_session';
-    });
-});
+//正常要加'middleware' => ['web'] 才可以用session,但沒加也是可以用不知是否為版本問題
+//Route::group(['middleware' => ['web']], function () {
+//    Route::get('admin/login', 'Admin\IndexController@login');
+//    
+//    Route::get('/', function () {
+//        return view('welcome');
+//    });
+//
+//    Route::get('/test_session', function () {        
+//        return 'test_session';
+//    });
+//});
 
 //Route Groups 路由分組的前綴詞
 //Route::get('admin/login', 'Admin\IndexController@login');
