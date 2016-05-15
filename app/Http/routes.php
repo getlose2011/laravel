@@ -11,17 +11,26 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//正常要加'middleware' => ['web'] 才可以用session,但沒加也是可以用不知是否為版本問題
+Route::group(['middleware' => ['web']], function () {
+    Route::get('admin/login', 'Admin\IndexController@login');
+    
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
+    Route::get('/test_session', function () {        
+        return 'test_session';
+    });
 });
 
 //Route Groups 路由分組的前綴詞
 //Route::get('admin/login', 'Admin\IndexController@login');
 //Route::get('admin/index', 'Admin\IndexController@index');
 //把相同的admin加入prefix , 相同命名空間Admin加入prefix
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
-    Route::get('login', 'IndexController@login');
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware'=>['web','adminlogin']], function () {
     Route::get('index', 'IndexController@index');
+    Route::get('logout', 'IndexController@logout');
     Route::resource('article', 'ArticleController');//資源控制器路由
 });
 

@@ -11,10 +11,16 @@ use App\Http\Controllers\Controller;
 class IndexController extends Controller
 {
     public function login(){
+        session(['admin' => 1]);
         return '登入';
     }
     
-    public function Index(){
+    public function Index(){        
         return view('welcome');
+    }
+
+    public function logout(){
+        session(['admin' => null]);//設為空值即清除
+        return redirect('/');//重新導到你的頁面
     }
 }
