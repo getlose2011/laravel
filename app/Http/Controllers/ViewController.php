@@ -21,11 +21,11 @@ class ViewController extends Controller
 //        ];
 //        return view('my_laravel', $data);//分配view
         //如果有其它不一樣的參數
-        $data = [
-            'name' => 'web',
-            'age' => 12
-       ];
-        $title = 'basic info';
-       return view('my_laravel', compact('data','title'));//分配view
+//        $data = [
+//            'name' => 'web',
+//            'age' => 12
+//       ];
+        $name = '<script>alert(1)</script>';
+       return view('my_laravel', compact('name'));//分配view
     }
 }
