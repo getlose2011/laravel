@@ -1,0 +1,1 @@
+<div class="footer">共用的底部</div>

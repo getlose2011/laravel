@@ -13,6 +13,6 @@ use App\Http\Controllers\Controller;
 class ArticleController extends Controller
 {
     public function index(){
-        return '文章首頁get';
+        return view('article');
     }
 }

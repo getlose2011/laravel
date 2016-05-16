@@ -1,0 +1,1 @@
+<div class="header">共用的頭部-{{$page_title}}</div>
