@@ -22,4 +22,9 @@ class ViewController extends Controller
         ];
         return view('my_laravel', compact('data'));
     }
+
+    public function layouts(){
+        return view('layouts');
+    }
+    
 }
