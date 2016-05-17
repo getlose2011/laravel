@@ -11,16 +11,19 @@
 |
 */
 
-Route::get('view', 'ViewController@index');
+Route::get('view/env', 'ViewController@env');
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('view/layouts', 'ViewController@layouts');
-
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware'=>['web','adminlogin']], function () {
-    Route::get('index', 'IndexController@index');
-    Route::get('logout', 'IndexController@logout');
-    Route::resource('article', 'ArticleController');//資源控制器路由
-});
+//
+//Route::get('view', 'ViewController@index');
+//
+//Route::get('/', function () {
+//    return view('index');
+//});
+//
+//Route::get('view/layouts', 'ViewController@layouts');
+//
+//Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware'=>['web','adminlogin']], function () {
+//    Route::get('index', 'IndexController@index');
+//    Route::get('logout', 'IndexController@logout');
+//    Route::resource('article', 'ArticleController');//資源控制器路由
+//});
