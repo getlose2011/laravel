@@ -13,6 +13,8 @@
 
 Route::get('view/env', 'ViewController@env');
 
+Route::get('/', 'IndexController@index');
+
 //
 //Route::get('view', 'ViewController@index');
 //
