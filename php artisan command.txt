@@ -1,5 +1,6 @@
 查看有什麼指令                  php artisan
-創建控制器在目錄下打            php artisan make:controller CommandController
+創建控制器在目錄下打            php artisan make:controller NameController
 查看路由清單                    php artisan route:list
 創建中間件(Middleware)          php artisan make:middleware XXXX
 重新產生APP_KEY                 php artisan key:generate
+創建一個Model                   php artisan make:model Name
