@@ -1,0 +1,7 @@
+//資料庫指令
+User::first();
+User::all();
+
+//加密及解密 use Illuminate\Support\Facades\Crypt;
+Crypt::decrypt
+Crypt::encrypt
