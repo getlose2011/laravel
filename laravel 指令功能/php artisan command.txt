@@ -5,3 +5,4 @@
 重新產生APP_KEY                 php artisan key:generate
 創建一個Model                   php artisan make:model Name
 資料庫: 遷移(可以作版本控制)	php artisan make:migration create_links_table//create_links_table => 名稱
+執行遷移						php artisan migrate
